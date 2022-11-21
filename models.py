@@ -6,9 +6,8 @@ from typing import Optional
 
 
 class MainMata(ormar.ModelMeta):
-    class Meta:
-        metadata = metadata
-        database = database
+    metadata = metadata
+    database = database
 
 
 class User(ormar.Model):

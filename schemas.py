@@ -16,3 +16,5 @@ class GetVideo(BaseModel):
     video: UploadVideo
 
 
+class Message(BaseModel):
+    message: str
