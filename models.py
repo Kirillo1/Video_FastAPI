@@ -1,6 +1,5 @@
 import ormar
-import datetime
-
+from datetime import datetime
 from db import metadata, database
 from typing import Optional
 
@@ -26,5 +25,5 @@ class Video(ormar.Model):
     title: str = ormar.String(max_length=40)
     description: str = ormar.String(max_length=1000)
     file: str = ormar.String(max_length=1000)
-    create_at: datetime.datetime = ormar.DateTime(default=datetime.datetime.now)
+    # create_at: ormar.DateTime(default=datetime.now)
     user: Optional[User] = ormar.ForeignKey(User)
